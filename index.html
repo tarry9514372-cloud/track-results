@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>田徑比賽成績公告</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>田徑比賽成績公告</h1>
+  <marquee id="marquee">歡迎查詢成績</marquee>
+  <input id="marqueeInput" placeholder="輸入公告文字">
+  <button onclick="updateMarquee()">套用</button>
+  <div>
+    <label>類別：</label>
+    <select id="categorySelect" onchange="populateEvents()">
+      <option>徑賽</option>
+      <option>田賽</option>
+      <option>趣味競賽</option>
+    </select>
+    <label>項目：</label>
+    <select id="eventSelect" onchange="showResults()"></select>
+    <input type="text" id="searchInput" placeholder="搜尋選手" oninput="showResults()">
+  </div>
+  <table id="resultsTable"></table>
+  <script src="script.js"></script>
+</body>
+</html>
